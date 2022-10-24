@@ -4,6 +4,7 @@ import Header from './Components/Header/Header';
 import Menu from './Components/Menu/Menu';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Example from './Pages/Example/Example';
+import Template_Listar from './Pages/Example/Template_Listar';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                 <Routes>
                   <Route path="/dashboard" element={<Example />} />
                   <Route path="/curso" element={<Example />} />
+                  <Route path="/template_listar" element={<Template_Listar />} />
                 </Routes>
               </div>
             </div>
