@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 export default class Cadastro_Usuario extends Component {
 
@@ -23,7 +24,7 @@ export default class Cadastro_Usuario extends Component {
     }
     
     radioBloqueio_change = (event) => {
-        if (event.target.value == "true"){
+        if (event.target.value === "true"){
             this.setState({bloqueio: true})
         }else{
             this.setState({bloqueio: false})
@@ -44,63 +45,49 @@ export default class Cadastro_Usuario extends Component {
             "nivelAcesso": this.state.nivel_acesso
         }
 
-        const requestOptions = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(dados)
-        }
-
         const url = "http://localhost:8080/usuario/incluir"
 
-        fetch(url, requestOptions)
-            .then(alert("Cadastro de usuário realizado com sucesso!"))
+        axios.post(url, dados)
+            .then(retorno => {
+                alert("Cadastro de usuário realizado com sucesso!")
+            })
             .catch(erro => alert(erro));
 
         
-        window.location.href="/dashboard";
+        //window.location.href="/dashboard";
     }
-
+      //row m-2 p-2
     render(){
     return(
-        <div>
-            <div className="row m-2 pt-5">
+        <div className="box">
+            <div className="box-header">
                 <h2>Cadastro de Usuário</h2>
             </div>
-            <div className="row m-2 p-2">
+            <div className="box-body">                            
                 <div className="col">
-                    <label>Nome</label>
-                </div> 
-                <div className="col-3">   
+                    <label>Nome</label>  
                     <input className="form-control name-pull-image" title="nome" id="nome" value={this.state.nome} onChange={this.txtNome_change} type="text" />
                 </div>
                 <div className="col">
-                    <label>E-mail</label>
-                </div> 
-                <div className="col-3">       
+                    <label>E-mail</label>      
                     <input className="form-control name-pull-image" title="e-mail" id="e-mail" value={this.state.email} onChange={this.txtEmail_change} type="text" />
                 </div>
                 <div className="col">
-                    <label>Senha</label>
-                </div>
-                <div className="col-3">    
+                    <label>Senha</label>    
                     <input className="form-control name-pull-image" title="senha" id="senha" value={this.state.senha} onChange={this.txtSenha_change} type="text" />
                 </div>
             </div>        
             <div className="row m-2 p-2">
-                <div className="col-1">
-                    <label>Bloqueio</label>
+                <div className="col">
+                    <div>
+                        <label>Bloqueio</label> 
+                    </div>
+                    <input class="form-check-input me-2" type="radio" name="flexRadio" id="true" value="true" onChange={this.radioBloqueio_change} />
+                    <label class="form-check-label" for="true">Sim</label>
+                    <input class="form-check-input ms-2 me-2" type="radio" name="flexRadio" id="false" value="false" onChange={this.radioBloqueio_change}/>
+                    <label class="form-check-label" for="false">Não</label>
                 </div>
-                <div className="col-1">   
-                            <input class="form-check-input" type="radio" name="flexRadio" id="true" value="true" onChange={this.radioBloqueio_change} />
-                            <label class="form-check-label" for="true">Sim</label>
-                </div> 
-                <div className="col-1">   
-                            <input class="form-check-input" type="radio" name="flexRadio" id="false" value="false" onChange={this.radioBloqueio_change}/>
-                            <label class="form-check-label" for="false">Não</label>
-                </div>
-                <div className="col-3">
+                <div className="col">
                 <select class="form-select" aria-label="Default select example" value={this.state.nivel_acesso} onChange={this.select_nivelAcesso_change}>
                     <option selected>Nível de acesso</option>
                     <option value="ALUNO">Aluno</option>
