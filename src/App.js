@@ -10,22 +10,17 @@ function App() {
     <div className='App h-100'>
       <div className='container-fluid p-0 h-100'>
         <BrowserRouter>
-          {window.location.pathname !== "/" ?
-            <div className="h-100">
-              <Header />
-              <Menu />
-              <div className='d-flex flex-wrap'>
-                <Routes>
-                  <Route path="/dashboard" element={<Example />} />
-                  <Route path="/curso" element={<Example />} />
-                </Routes>
-              </div>
+          <div className="h-100">
+            <Header />
+            <Menu />
+            <div className='d-flex flex-wrap'>
+              <Routes>
+                <Route path="/dashboard" element={<Example />} />
+                <Route path="/curso" element={<Example />} />
+                <Route path="/" element={<Example />} />
+              </Routes>
             </div>
-          :
-            <Routes>
-              <Route path="/" element={<Example />} />
-            </Routes>
-          }
+          </div>
         </BrowserRouter>
       </div>
     </div>

@@ -5,9 +5,19 @@ import { MenuContext } from "../../Contexts/MenuContext/MenuContext";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
-    const { open } = useContext(MenuContext);
+    const { open, mostrar, setMostrar } = useContext(MenuContext);
     const routes = ["/dashboard","/curso","/disciplina","/grade_curricular","/professor","/horario","/usuario"];
     const [routeActive, setRouteActive] = useState(""+window.location.pathname);
+    
+    if(window.localStorage.getItem("user")==="null" || window.localStorage.getItem("user")===null){
+        if(window.location.pathname!=="/"){
+            setMostrar(false);
+        }
+    }else{
+        if(!mostrar){
+            setMostrar(true);
+        }
+    }
 
     useEffect(()=>{
         selecionaActive();
@@ -53,9 +63,13 @@ const Menu = () => {
         );
     };
 
-    if(open){
+    if(open && mostrar){
         return(retornoMenu());
-    };
+    }else{
+        return(
+            <></>
+        )
+    }
 }
 
 export default Menu;

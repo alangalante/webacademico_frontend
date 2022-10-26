@@ -1,13 +1,23 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { MenuContext } from "../../Contexts/MenuContext/MenuContext";
 
 const Example = () => {
+    const { setMostrar } = useContext(MenuContext);
     const [example1, setExample1] = useState("");
     const [example2, setExample2] = useState("");
     const [example3, setExample3] = useState("");
+    const navigate = useNavigate();
 
     function Action(){
         alert("Action "+example1 + ' ' + example2 + ' ' + example3);
-        window.location.href="/dashboard";
+        let usuario = {
+            nome: "teste",
+            id: 1
+        }
+        localStorage.setItem("user",JSON.stringify(usuario));
+        setMostrar(true);
+        navigate("/dashboard");
     }
 
     return(
