@@ -4,6 +4,7 @@ import Header from './Components/Header/Header';
 import Menu from './Components/Menu/Menu';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Example from './Pages/Example/Example';
+import Horario from './Pages/Horario/Horario';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                 <Routes>
                   <Route path="/dashboard" element={<Example />} />
                   <Route path="/curso" element={<Example />} />
+                    <Route path="/horario" element={<Horario />}/>
                 </Routes>
               </div>
             </div>
