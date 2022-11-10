@@ -5,6 +5,7 @@ import Menu from './Components/Menu/Menu';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Example from './Pages/Example/Example';
 import Horario from './Pages/Horario/Horario';
+import Disciplina from "./Pages/Disciplina/Disciplina";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                   <Route path="/dashboard" element={<Example />} />
                   <Route path="/curso" element={<Example />} />
                     <Route path="/horario" element={<Horario />}/>
+                   <Route path="/disciplina" element={<Disciplina/>}/>
                 </Routes>
               </div>
             </div>

@@ -4,9 +4,9 @@ const Horario = () => {
     const [id, setId] = useState("");
     const [horaInicio, setHoraInicio] = useState("");
     const [horaFim, setHoraFim] = useState("");
-    const [diaSemana, setDiaSemana] = useState("");
-    const [ativo, setAtvio] = useState("");
-    const [turno, setTurno] = useState("");
+    const [diaSemana] = useState("");
+    const [ativo] = useState("");
+    const [turno] = useState("");
 
     function Action(){
         alert("Action "+ id + '' + horaInicio + '' + horaFim + ' ' + diaSemana + ativo + turno);
@@ -58,6 +58,12 @@ const Horario = () => {
                         <option>Noite</option>
                     </select>
                 </div>
+            </div>
+            <div className="box-footer">
+                <a className="btn fw-bold" href={window.location.pathname}>Limpar campos</a>
+                <button type="button" className="btn btn-primary" onClick={Action}>
+                    Salvar
+                </button>
             </div>
         </div>
     )
