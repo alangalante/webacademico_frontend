@@ -1,6 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Cadastro_Usuario from './Pages/Cadastro_Usuario/Cadastro_Usuario'
 import Disciplina from "./Pages/Disciplina/Disciplina";
 import Example from './Pages/Example/Example';
 import Header from './Components/Header/Header';
@@ -22,6 +23,7 @@ function App() {
                 <Routes>
                   <Route path="/dashboard" element={<Example />} />
                   <Route path="/curso" element={<Example />} />
+                  <Route path="/usuario" element={<Cadastro_Usuario />} />
                   <Route path="/template_listar" element={<Template_Listar />} />
                   <Route path="/horario" element={<Horario />}/>
                   <Route path="/disciplina" element={<Disciplina/>}/>
