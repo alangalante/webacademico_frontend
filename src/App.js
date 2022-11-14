@@ -1,9 +1,11 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./Components/Header/Header";
-import Menu from "./Components/Menu/Menu";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Example from "./Pages/Example/Example";
+import Disciplina from "./Pages/Disciplina/Disciplina";
+import Example from './Pages/Example/Example';
+import Header from './Components/Header/Header';
+import Horario from './Pages/Horario/Horario';
+import Menu from './Components/Menu/Menu';
 import Professor from "./Pages/Professor";
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
                 <Routes>
                   <Route path="/dashboard" element={<Example />} />
                   <Route path="/curso" element={<Example />} />
+                  <Route path="/horario" element={<Horario />}/>
+                  <Route path="/disciplina" element={<Disciplina/>}/>
                   <Route path="/professor" element={<Professor />} />
                 </Routes>
               </div>
