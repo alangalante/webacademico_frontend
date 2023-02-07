@@ -1,7 +1,8 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Cadastro_Usuario from "./Pages/Cadastro_Usuario/Cadastro_Usuario";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Cadastro_Usuario from './Pages/Cadastro_Usuario/Cadastro_Usuario'
+import Cadastro_Curso from './Pages/Cadastro_Curso/Cadastro_Curso'
 import Disciplina from "./Pages/Disciplina/Disciplina";
 import Example from "./Pages/Example/Example";
 import Header from "./Components/Header/Header";
