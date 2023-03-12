@@ -3,10 +3,10 @@ import { Collapse } from "react-bootstrap"
 import { useContext, useEffect, useState } from "react";
 import { MenuContext } from "../../Contexts/MenuContext/MenuContext";
 import { Link } from "react-router-dom";
-
+import React, { Component }  from 'react';
 const Menu = () => {
     const { open } = useContext(MenuContext);
-    const routes = ["/dashboard","/curso","/disciplina","/grade_curricular","/professor","/horario","/usuario"];
+    const routes = ["/dashboard","/curso","/disciplina","/grade_curricular","/professor","/horario","/usuario","/aluno"];
     const [routeActive, setRouteActive] = useState(""+window.location.pathname);
 
     useEffect(()=>{

@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import { createContext, useState } from 'react';
 
 export const MenuContext = createContext();
