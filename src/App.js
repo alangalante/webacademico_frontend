@@ -11,6 +11,7 @@ import Menu from "./Components/Menu/Menu";
 import Professor from "./Pages/Professor";
 import GradeCurricular from "./Pages/Grade_Curricular";
 import Template_Listar from "./Pages/Example/Template_Listar";
+import Periodo_Letivo from "./Pages/Periodo_Letivo/Perido_Letivo";
 
 function App() {
   return (
@@ -24,11 +25,12 @@ function App() {
               <div className="d-flex flex-wrap">
                 <Routes>
                   <Route path="/dashboard" element={<Example />} />
-                  <Route path="/curso" element={<Example />} />
+                  <Route path="/curso" element={<Cadastro_Curso />} />
                   <Route
                     path="/grade_curricular"
                     element={<GradeCurricular />}
                   />
+                  <Route path="/periodo_letivo" element={<Periodo_Letivo />}/>
                   <Route path="/usuario" element={<Cadastro_Usuario />} />
                   <Route
                     path="/template_listar"
