@@ -75,7 +75,7 @@ export default class Cadastro_Curso extends Component {
             .catch(erro => alert(erro));
 
         console.log(this.state.dataInicioFuncionamento)
-        window.location.href="/curso";
+        //window.location.href="/dashboard";
     }
       //row m-2 p-2
     render(){
@@ -138,3 +138,4 @@ export default class Cadastro_Curso extends Component {
     );
     }
 }    
+

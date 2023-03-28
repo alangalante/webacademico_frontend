@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Menu = () => {
     const { open } = useContext(MenuContext);
-    const routes = ["/dashboard","/curso","/disciplina","/grade_curricular","/periodo_letivo","/professor","/horario","/usuario"];
+    const routes = ["/dashboard","/curso","/disciplina","/grade_curricular","/professor","/horario","/usuario"];
     const [routeActive, setRouteActive] = useState(""+window.location.pathname);
 
     useEffect(()=>{
