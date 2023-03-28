@@ -10,7 +10,7 @@ import Horario from "./Pages/Horario/Horario";
 import Menu from "./Components/Menu/Menu";
 import Professor from "./Pages/Professor";
 import GradeCurricular from "./Pages/GradeCurricular/GradeCurricular";
-import TemplateListar from "./Pages/Example/TemplateListar;
+import TemplateListar from "./Pages/Example/TemplateListar";
 import PeriodoLetivo from "./Pages/PeriodoLetivo/PeridoLetivo";
 
 function App() {
