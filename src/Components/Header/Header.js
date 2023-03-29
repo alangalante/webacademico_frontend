@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import './Header.css';
 import { FaUserCircle, FaBars } from 'react-icons/fa';
 import { Dropdown } from 'react-bootstrap';
