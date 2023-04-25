@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import CadastroUsuario from './Pages/CadastroUsuario/CadastroUsuario'
-import CadastroCurso from './Pages/CadastroCurso/CadastroCurso'
+import CadastroUsuario from './Pages/CadastroUsuario/CadastroUsuario';
+import CadastroCurso from './Pages/CadastroCurso/CadastroCurso';
 import Disciplina from "./Pages/Disciplina/Disciplina";
 import Example from "./Pages/Example/Example";
 import Header from "./Components/Header/Header";
@@ -12,9 +12,8 @@ import Menu from "./Components/Menu/Menu";
 import Professor from "./Pages/Professor/index";
 import GradeCurricular from "./Pages/GradeCurricular/GradeCurricular";
 import TemplateListar from "./Pages/Example/TemplateListar";
-import PeriodoLetivo from "./Pages/PeriodoLetivo/PeridoLetivo";
+import PeriodoLetivo from "./Pages/PeriodoLetivo/PeriodoLetivo";
 import Aluno from "./Pages/Aluno/Aluno";
-import PeriodoLetivo from "./Pages/Periodo_Letivo";
 import Turma from "./Pages/Turma";
 
 function App() {
@@ -30,21 +29,14 @@ function App() {
                 <Routes>
                   <Route path="/dashboard" element={<Example />} />
                   <Route path="/curso" element={<CadastroCurso />} />
-                  <Route
-                    path="/gradecurricular"
-                    element={<GradeCurricular />}
-                  />
-                  <Route path="/periodoletivo" element={<PeriodoLetivo />}/>
+                  <Route path="/gradecurricular" element={<GradeCurricular />} />
                   <Route path="/usuario" element={<CadastroUsuario />} />
-                  <Route
-                    path="/templatelistar"
-                    element={<TemplateListar />}
-                  />
+                  <Route path="/templatelistar" element={<TemplateListar />} />
                   <Route path="/horario" element={<Horario />} />
                   <Route path="/disciplina" element={<Disciplina />} />
                   <Route path="/professor" element={<Professor />} />
                   <Route path="/aluno" element={<Aluno />} />
-                  <Route path="/periodo_letivo" element={<PeriodoLetivo />} />
+                  <Route path="/periodo_letivo" element={<PeriodoLetivo />}/>
                   <Route path="/turma" element={<Turma />} />
                 </Routes>
               </div>
